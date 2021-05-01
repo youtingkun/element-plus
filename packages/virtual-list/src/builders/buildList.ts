@@ -12,7 +12,6 @@ import {
 } from 'vue'
 import memo from 'lodash/memoize'
 
-import { on, off } from '@element-plus/utils/dom'
 import { isNumber, isString, $ } from '@element-plus/utils/util'
 import isServer from '@element-plus/utils/isServer'
 
@@ -137,6 +136,7 @@ const createList = ({
 
       const clientSize = computed(() => _isHorizontal.value ? props.width : props.height)
 
+      // methods
       const {
         hasReachedEdge,
         onWheel,
@@ -153,7 +153,6 @@ const createList = ({
         )
       })
 
-      // methods
       const emitEvents = () => {
         const { total } = props
 
@@ -465,7 +464,7 @@ const createList = ({
         layout,
         onScroll: onScrollbarScroll,
         ratio: (clientSize * 100) / this.estimatedTotalSize,
-        scrollFrom: states.scrollOffset,
+        scrollFrom: states.scrollOffset / this.estimatedTotalSize,
         total,
         visible: true,
       })
