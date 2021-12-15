@@ -103,6 +103,7 @@ const copyCode = async () => {
 </script>
 
 <template>
+  <!-- 用于展示案例，包裹在外层的组件 -->
   <ClientOnly>
     <!-- danger here DO NOT USE INLINE SCRIPT TAG -->
     <p class="example-description" v-html="decodedDescription" />
