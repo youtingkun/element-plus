@@ -16,6 +16,7 @@ import ParallaxHome from './components/globals/parallax-home.vue'
 
 export { default as NotFound } from './components/vp-not-found.vue'
 
+// VPApp作为项目的主入口文件
 export default VPApp
 export const globals = [
   ['Demo', VPDemo],

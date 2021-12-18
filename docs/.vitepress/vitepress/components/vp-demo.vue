@@ -69,6 +69,7 @@ const [sourceVisible, setSourceVisible] = useToggle()
 const lang = useLang()
 const demoSourceUrl = useSourceCode(toRef(props, 'path'))
 
+// 查找案例中的vue文件
 const formatPathDemos = computed(() => {
   const demos = {}
 

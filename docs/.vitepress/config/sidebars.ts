@@ -22,6 +22,7 @@ function getComponentsSideBar() {
 
 // return sidebar with language configs.
 // this might create duplicated data but the overhead is ignorable
+// 生成sidebar需要的数据
 const getSidebars = () => {
   return {
     '/guide/': getGuideSidebar(),

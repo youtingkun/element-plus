@@ -13,6 +13,7 @@ export const useSidebar = () => {
       hasSidebar: computed(() => false),
     }
   }
+  console.log('site数据', site)
   const sidebars = computed(() => {
     if (page.value.frontmatter.sidebar === false) return []
     const sidebars = getSidebarConfig(
@@ -22,6 +23,7 @@ export const useSidebar = () => {
     )
     return sidebars
   })
+  console.log('sidebars数据', sidebars.value)
 
   return {
     sidebars,
